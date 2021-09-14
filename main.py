@@ -1,6 +1,10 @@
 from utilties import reply_mail
 from utilties import read_excel
 from utilties import operator_mysql
+from algorithm import anlyze_income
+from algorithm import anlyze_consum
+from algorithm import anlyze_preconsum
+from algorithm import anlyze_finanical
 
 import pandas as pd
 import argparse
@@ -12,6 +16,7 @@ logger = logging.getLogger("main.log")
 
 def analyze_data(store_paint):
     print("analyze data", store_paint)
+    
 
 def clear_store_data(origin_data, excel_file, key, mysql_name):
     df = pd.read_csv(excel_file)
