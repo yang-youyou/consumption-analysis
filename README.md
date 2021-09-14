@@ -11,7 +11,7 @@
 * 从性别、年级、薪资、消费、爱好等多个角度设计中科院学生消费行为问卷：[https://www.wjx.cn/vj/PG43TPk.aspx](https://www.wjx.cn/vj/PG43TPk.aspx)
 * 问卷星导出数据，清洗出有效问卷578份，存入 Excel 及 MySQL
 ### 2.2 数据存储
-* 存入 Excel 表[data/info_main.csv](.data/info_main.csv)
+* 存入 Excel 表[data/data_info.csv](./data/data_info.csv)
 * 设计若干数据库表（中科院研究生信息总表、消费行为分表、理财行为分表）
 
   <font color=green size=3>中科院研究生信息总表: </font>
