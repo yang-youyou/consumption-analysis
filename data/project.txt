@@ -1,0 +1,24 @@
+1.线上监控系统
+    -基于Seastar框架，开发ShardMetrics模版、设计配置文件格式，在Cpp代码中进行插件式的监控指标增删
+    -支持运维进行线上机器Promethues设置，定义指标采集规则，将注册到线上的服务通过18080端口将监控信息抓取到promethues
+    -监控可视化支持，使用开源的数据可视化工具grafana配置面板，Hawkeys系统配置报警系统。
+2. 机器学习平台二方库重构
+    - 二次开发平台已有的12个二方库，开发 ml-unity 库进行重新组织管理，重新Cmake/UT进行重新编译设计。
+    - 重构external库（submoudule）管理的43个三方开源库，对镜像进行的版本及Dockerfile进行重新设计、分层提供镜像。
+3. NPS （在线预测服务）
+    - 开发Cuda/GPU线程池，支持GPU预测，支持 consul 服务注册、模型注册、服务发现。
+    - 开发libtorch模型加载功能，基于flatbuffer协议封装，支持压测、联调。
+    - 支持Gpu编译镜像，完善服务中对于embeding、forward、pull、cast、compute等性能监控及torchmodel一致性等监控。
+
+4. Mapping_Service (IOS14 -IDFA)
+    - 基于flatbuffer协议通信，开发支持滚动更新的加密协议。
+    - 支持Http/Tcp协议的Response应答，压测Tcp负载、Http-Post负载，提供服务交付流量测SDK团队和效果算法侧团队，支持上线部署。
+
+5.MindAlpha开源与上架
+    -NPS云原生开发，支持K8s调度，开发deployment、helm，支持GPU/CPU 混布，自动负载均衡。xxxx
+    -调研aws机器、支持定价、支持上架 aws marktplace xxxx url
+
+6. CI上线/回归测试系统
+    -定义Jenkinsflie、pipeline、触发方式，配合部署Jenkins机器，开发 ml-jenkins 库定义触发后执行逻辑
+    -开发Python代码定义回归测试流程，提供触发回归、编译上传、consul监控key触发下载、启动、打请求、分析、邮件回复的完整流程。
+    -容器化RS、NPS、Cassandra服务、触发后k8s调度
